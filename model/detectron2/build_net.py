@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: build_net.py
-@author: fanc
+@author: author
 @time: 2025/2/18 下午4:03
 '''
 

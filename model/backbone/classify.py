@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: classify.py
-@author: fanc
+@author: author
 @time: 2025/2/21 上午10:04
 '''
 from detectron2.modeling import build_model

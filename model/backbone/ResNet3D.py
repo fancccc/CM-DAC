@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: ResNet3D.py
-@author: fanc
+@author: author
 @time: 2025/1/8 13:42
 '''
 import math

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: dataloader.py
-@author: fanc
+@author: author
 @time: 2024/12/16 20:27
 '''
 from torch.utils.data import Dataset, DataLoader
@@ -175,7 +175,7 @@ class CSPL3dDataset(Dataset):
 if __name__ == '__main__':
     ## luna16
     # import matplotlib.pyplot as plt
-    # root = '/data6-home/fanchenchenzc/datasets/LUNA16'
+    # root = '/data6-home/authorhenxxx/datasets/LUNA16'
     # dataset = LUNA16Dataset(root, 'test.json')
     # dataloader = DataLoader(dataset, batch_size=2, shuffle=True, num_workers=0)
     # for i, data in enumerate(dataloader):
@@ -189,7 +189,7 @@ if __name__ == '__main__':
     # plt.show()
 
     ## 2d detection
-    root = r'F:\fanc\datasets\CSPL\1.25mm_2D_detection'
+    root = r'F:\author\datasets\CSPL\1.25mm_2D_detection'
     data = os.path.join('ImageSets', 'Main', 'train.txt')
     dataset = CSPL2dDetDataset(root, data)
     dataloader = DataLoader(dataset, batch_size=1, shuffle=True)

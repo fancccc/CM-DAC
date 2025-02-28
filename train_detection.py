@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: train_detection.py
-@author: fanc
+@author: author
 @time: 2025/1/8 17:23
 '''
 from model.backbone.detection import Detection
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     parser.add_argument('--MODEL-WEIGHT', type=str, default=None)
     parser.add_argument('--phase', type=str, default='train')
     parser.add_argument('--num-workers', type=int, default=4)
-    parser.add_argument('--root', type=str, default='/data6-home/fanchenchenzc/datasets/LUNA16')
+    parser.add_argument('--root', type=str, default='/data6-home/authorhenxxx/datasets/LUNA16')
     args = parser.parse_args()
     if args.phase == 'train':
         now = time.strftime("%Y%m%d%H%M", time.localtime())

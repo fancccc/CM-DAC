@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: ImageEncoder3D.py
-@author: fanc
+@author: author
 @time: 2025/1/8 13:39
 '''
 import torch

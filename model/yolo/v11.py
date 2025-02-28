@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: v11.py
-@author: fanc
+@author: author
 @time: 2025/2/22 下午10:03
 '''
 from ultralytics import YOLO

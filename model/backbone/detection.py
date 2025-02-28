@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: detection.py
-@author: fanc
+@author: author
 @time: 2025/1/8 16:00
 '''
 # from .ImageEncoder3D import ImageEncoder3D, PatchEmbed3D, generate_model, FpnNeck3D

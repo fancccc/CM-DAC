@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: metrics.py
-@author: fanc
+@author: author
 @time: 2025/1/14 15:03
 '''
 import math

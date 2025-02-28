@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: detection.py
-@author: fanc
+@author: author
 @time: 2025/2/17
 '''
 from detectron2.modeling import build_model
@@ -15,7 +15,7 @@ from detectron2.data import MetadataCatalog
 from detectron2.engine import DefaultTrainer
 def CSLP2D(phase='train'):
     res = []
-    root = '/zhangyongquan/fanc/datasets/partA/1.25mm_2D_detection/'
+    root = '/xxxxxx/author/datasets/partA/1.25mm_2D_detection/'
     with open(os.path.join(root, 'ImageSets', f'{phase}.txt'), 'r') as f:
         files = f.read().strip().split()
     for i, fn in enumerate(files):

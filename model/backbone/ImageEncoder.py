@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: ImageEncoder.py
-@author: fanc
+@author: author
 @time: 2025/1/6 9:44
 '''
 # Copyright (c) Meta Platforms, Inc. and affiliates.

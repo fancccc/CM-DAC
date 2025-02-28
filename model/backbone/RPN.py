@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: RPN.py
-@author: fanc
+@author: author
 @time: 2025/1/8 16:00
 '''
 

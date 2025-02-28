@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: train_detection.py
-@author: fanc
+@author: author
 @time: 2025/2/5 00:14
 '''
 import model.backbone.classify
@@ -308,6 +308,13 @@ def main(args):
                 roc_auc = roc_auc_score(y_true_binarized, all_probs, multi_class='ovr')
                 f1 = f1_score(all_labels, all_preds, average='macro')
                 precision = precision_score(all_labels, all_preds, average='macro')
+                res = {}
+                res['true_label'] = all_labels.numpy() if isinstance(all_labels, np.ndarray) else all_labels
+                res['predicted'] = all_probs.numpy() if isinstance(all_probs, np.ndarray) else all_probs
+                # import pandas as pd
+                # res = pd.DataFrame([_.numpy(), label.numpy()]).T
+                save_dir = os.path.dirname(args.MODEL_WEIGHT)
+                np.save(os.path.join(save_dir, 'pred.npy'), res)
             print(f'''
             Validation Metrics:
             Accuracy: {accuracy:.4f}
@@ -316,6 +323,7 @@ def main(args):
             F1 Score: {f1:.4f}
             ROC-AUC (OvR): {roc_auc:.4f}
             Kappa: {kappa:.4f}
+            {os.path.join(save_dir, 'pred.npy')}
             ''')
 
 if __name__ == '__main__':
@@ -329,7 +337,7 @@ if __name__ == '__main__':
     parser.add_argument('--MODEL-WEIGHT', type=str, default=None)
     parser.add_argument('--phase', type=str, default='train')
     parser.add_argument('--num-workers', type=int, default=4)
-    parser.add_argument('--root', type=str, default='/zhangyongquan/fanc/datasets/')
+    parser.add_argument('--root', type=str, default='/xxxxxx/author/datasets/')
     args = parser.parse_args()
     if args.phase == 'train':
         now = time.strftime("%Y%m%d%H%M", time.localtime())

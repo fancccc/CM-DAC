@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: loss.py
-@author: fanc
+@author: author
 @time: 2025/2/21 下午4:55
 '''
 import torch.nn as nn

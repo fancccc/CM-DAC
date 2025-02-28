@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: data.py
-@author: fanc
+@author: author
 @time: 2025/2/19 下午3:48
 '''
 # from detectron2.modeling import build_model
@@ -24,7 +24,7 @@ import SimpleITK as sitk
 
 def LUAD2_2D(phase='train'):
     res = []
-    root = '/zhangyongquan/fanc/datasets/LungCancer2'
+    root = '/xxxxxx/author/datasets/LungCancer2'
     ann = pd.read_csv(os.path.join(root, f'{phase}.csv'))
     ann['bbox'] = ann['bbox'].apply(lambda x: eval(x) if isinstance(x, str) else x)
     fcolumns = list(filter(lambda x: re.search('^f', x), list(ann.columns)))
@@ -49,7 +49,7 @@ def LUAD2_2D(phase='train'):
 
 def CSLP2D(phase='train'):
     res = []
-    root = '/zhangyongquan/fanc/datasets/partA/1.25mm_2D_detection/'
+    root = '/xxxxxx/author/datasets/partA/1.25mm_2D_detection/'
     with open(os.path.join(root, 'ImageSets', f'{phase}.txt'), 'r') as f:
         files = f.read().strip().split()
     for i, fn in enumerate(files):
@@ -156,7 +156,7 @@ class LUAD2_3D(Dataset):
         return img
 
 if __name__ == '__main__':
-    # full_dataset = LUAD2_3D(root='/zhangyongquan/fanc/datasets/LC1', phase='all')
+    # full_dataset = LUAD2_3D(root='/xxxxxx/author/datasets/LC1', phase='all')
     # full_labels = np.array([data['label'] for data in full_dataset])
     # root = args.root
     # full_dataset = LUAD2_3D(root, phase='all')
@@ -176,7 +176,7 @@ if __name__ == '__main__':
     #     print("Train subset:", np.bincount(full_labels[train_idx]))
     #     print("Val subset:  ", np.bincount(full_labels[val_idx]))
     # print(labels)
-    dataset = LUAD2_3D(root='/zhangyongquan/fanc/datasets/LPCD', phase='train')
+    dataset = LUAD2_3D(root='/xxxxxx/author/datasets/LPCD', phase='train')
     dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
     for i, batch in enumerate(dataloader):
         print(batch['bid'], batch['ct'].shape, batch['clinical'].shape)

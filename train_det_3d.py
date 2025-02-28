@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 @file: train_detection.py
-@author: fanc
+@author: author
 @time: 2025/2/5 00:14
 '''
 from model.backbone.detection import Detection2d
@@ -203,7 +203,7 @@ if __name__ == '__main__':
     parser.add_argument('--MODEL-WEIGHT', type=str, default=None)
     parser.add_argument('--phase', type=str, default='train')
     parser.add_argument('--num-workers', type=int, default=4)
-    parser.add_argument('--root', type=str, default='/zhangyongquan/fanc/datasets/')
+    parser.add_argument('--root', type=str, default='/xxxxxx/author/datasets/')
     args = parser.parse_args()
     if args.phase == 'train':
         now = time.strftime("%Y%m%d%H%M", time.localtime())
